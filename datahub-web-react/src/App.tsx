@@ -34,6 +34,8 @@ import { ContainerEntity } from './app/entity/container/ContainerEntity';
 import GlossaryNodeEntity from './app/entity/glossaryNode/GlossaryNodeEntity';
 import { DataPlatformEntity } from './app/entity/dataPlatform/DataPlatformEntity';
 import { DataProductEntity } from './app/entity/dataProduct/DataProductEntity';
+import { GlobalNavBar } from './app/podium/globalNavBar/GlobalNavBar';
+import { applications, navigationMetaData } from './app/podium/globalNavBar/mockData';
 
 /*
     Construct Apollo Client
@@ -122,6 +124,15 @@ const App: React.VFC = () => {
     return (
         <HelmetProvider>
             <ThemeProvider theme={dynamicThemeConfig}>
+                <GlobalNavBar 
+                    currentAppPath={"/ordertracking/orderscontrolsheet"}
+                    currentAppName={"Track & Trace"}
+                    currentAppCode={"/TRACKANDTARCE"}
+                    appsData={applications}
+                    //@ts-ignore
+                    metadata={navigationMetaData}
+                    goHome={() => {}}
+                />
                 <Router>
                     <Helmet>
                         <title>{dynamicThemeConfig.content.title}</title>
