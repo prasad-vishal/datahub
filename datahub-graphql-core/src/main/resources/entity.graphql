@@ -599,6 +599,7 @@ type Mutation {
     """
     Update lineage for an entity
     """
+
     updateLineage(input: UpdateLineageInput!): Boolean
 
     """
@@ -10399,6 +10400,60 @@ type Embed {
 """
 Input required to set or clear information related to rendering a Data Asset inside of DataHub.
 """
+type EntityPrivileges {
+  """
+  Whether or not a user can create child entities under a parent entity.
+  For example, can one create Terms/Node sunder a Glossary Node.
+  """
+  canManageChildren: Boolean
+
+  """
+  Whether or not a user can delete or move this entity.
+  """
+  canManageEntity: Boolean
+
+  """
+  Whether or not a user can create or delete lineage edges for an entity.
+  """
+  canEditLineage: Boolean
+
+  """
+  Whether or not a user update the embed information
+  """
+  canEditEmbed: Boolean
+
+  """
+  Whether or not a user can update the Queries for the entity (e.g. dataset)
+  """
+  canEditQueries: Boolean
+}
+
+
+input LineageEdge {
+    """
+    Urn of the source entity. This urn is downstream of the destinationUrn.
+    """
+    downstreamUrn: String!
+
+    """
+    Urn of the destination entity. This urn is upstream of the destinationUrn
+    """
+    upstreamUrn: String!
+}
+
+input UpdateLineageInput {
+    """
+    New lineage edges to upsert
+    """
+    edgesToAdd: [LineageEdge]!
+
+    """
+    Lineage edges to remove. Takes precedence over edgesToAdd - so edges existing both edgesToAdd
+    and edgesToRemove will be removed.
+    """
+    edgesToRemove: [LineageEdge]!
+}
+
 input UpdateEmbedInput {
   """
   The URN associated with the Data Asset to update. Only dataset, dashboard, and chart urns are currently supported.
