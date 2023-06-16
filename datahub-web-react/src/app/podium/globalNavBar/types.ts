@@ -42,7 +42,7 @@ export type MenuItemObj = {
 
 
 export type L0MenuObj = {
-    backNavigation: {
+    backNavigation?: {
       id: string;
       label: string;
       path: string;

@@ -124,16 +124,16 @@ const App: React.VFC = () => {
     return (
         <HelmetProvider>
             <ThemeProvider theme={dynamicThemeConfig}>
-                <GlobalNavBar 
-                    currentAppPath={"/ordertracking/orderscontrolsheet"}
-                    currentAppName={"Track & Trace"}
-                    currentAppCode={"/TRACKANDTARCE"}
-                    appsData={applications}
-                    //@ts-ignore
-                    metadata={navigationMetaData}
-                    goHome={() => {}}
-                />
                 <Router>
+                    <GlobalNavBar 
+                        currentAppPath='/'
+                        currentAppName='Self Service Analytics'
+                        currentAppCode='SELFSERVICE'
+                        appsData={applications}
+                        menuData={navigationMetaData}
+                        variant='full'
+                        goHome={() => {}}
+                    />
                     <Helmet>
                         <title>{dynamicThemeConfig.content.title}</title>
                     </Helmet>
