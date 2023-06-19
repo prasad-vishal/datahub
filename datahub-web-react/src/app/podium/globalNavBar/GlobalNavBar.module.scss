@@ -37,6 +37,14 @@
   .logo {
     @extend .item;
     margin-right: calc(#{8px} * 2);
+
+    & div:last-child > div > a > div > span:last-child{
+      font-weight: bold;
+      font-size: 14px;
+    }
+    & div:last-child > div > a > div > span:first-child{
+      font-size: 14px;
+    }
   }
 
   .businessContextSwitcher {
