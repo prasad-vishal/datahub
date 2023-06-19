@@ -88,7 +88,7 @@ export const SearchHeader = ({
     return (
         <Header style={styles.header as any}>
             <LogoSearchContainer>
-                <Link to="/">
+                {/* <Link to="/">
                     <LogoImage
                         src={
                             appConfig.config !== DEFAULT_APP_CONFIG
@@ -97,7 +97,7 @@ export const SearchHeader = ({
                         }
                         preview={false}
                     />
-                </Link>
+                </Link> */}
                 <SearchBar
                     initialQuery={initialQuery}
                     placeholderText={placeholderText}

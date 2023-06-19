@@ -246,7 +246,7 @@ export const HomePageHeader = () => {
                 </NavGroup>
             </Row>
             <HeaderContainer>
-                <Image
+                {/* <Image
                     src={
                         appConfig.config !== DEFAULT_APP_CONFIG
                             ? appConfig.config.visualConfig.logoUrl || themeConfig.assets.logoUrl
@@ -254,7 +254,7 @@ export const HomePageHeader = () => {
                     }
                     preview={false}
                     style={styles.logoImage}
-                />
+                /> */}
                 {!!themeConfig.content.subtitle && (
                     <Typography.Text style={styles.subtitle}>{themeConfig.content.subtitle}</Typography.Text>
                 )}

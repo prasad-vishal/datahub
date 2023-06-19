@@ -137,11 +137,14 @@ const App: React.VFC = () => {
                     <Helmet>
                         <title>{dynamicThemeConfig.content.title}</title>
                     </Helmet>
+                    <div style={{"marginTop":"72px"}}>
                     <EntityRegistryContext.Provider value={entityRegistry}>
                         <ApolloProvider client={client}>
                             <Routes />
                         </ApolloProvider>
                     </EntityRegistryContext.Provider>
+                    </div>
+                        
                 </Router>
             </ThemeProvider>
         </HelmetProvider>
