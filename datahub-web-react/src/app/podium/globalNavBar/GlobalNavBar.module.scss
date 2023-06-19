@@ -1,8 +1,14 @@
+:root{
+  --palette-neutral-minus-two: #696969;
+} 
+
 .GlobalNavBar {
   box-sizing: border-box;
   padding: 12px 24px 12px 16px;
   height: 72px;
   display: flex;
+  z-index: 1;
+  width: 100%;
   position:fixed;
   align-items: center;
   color: #000;
