@@ -23,16 +23,16 @@ const FormInput = styled(Input)`
         font-size: 18px;
         border-radius: 8px;
         background-color: transparent;
-        color: white;
+        color: black;
         line-height: 3.8715;
     }
     > .ant-input {
-        color: white;
+        color: black;
         font-size: 14px;
         background-color: transparent;
     }
     > .ant-input:hover {
-        color: white;
+        color: black;
         font-size: 14px;
         background-color: transparent;
     }

@@ -230,7 +230,7 @@ export const HomePageHeader = () => {
 
     return (
         <Background>
-            <PodiumLogo style={{position: "fixed", top: "7rem", left:"3rem"}}/>
+            {/* <PodiumLogo style={{position: "fixed", top: "7rem", left:"3rem"}}/> */}
             <Row justify="space-between" style={styles.navBar}>
                 <WelcomeText>
                     {!!user && (
