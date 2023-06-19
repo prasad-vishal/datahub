@@ -22,6 +22,8 @@ import { HOME_PAGE_SEARCH_BAR_ID } from '../onboarding/config/HomePageOnboarding
 import { useQuickFiltersContext } from '../../providers/QuickFiltersContext';
 import { getAutoCompleteInputFromQuickFilter } from '../search/utils/filterUtils';
 import { useUserContext } from '../context/useUserContext';
+import PodiumLogoWithText from '../podium/PodiumLogoWithText';
+import PodiumLogo from '../podium/PodiumLogo';
 
 const Background = styled.div`
     width: 100%;
@@ -228,6 +230,7 @@ export const HomePageHeader = () => {
 
     return (
         <Background>
+            <PodiumLogo style={{position: "fixed", top: "7rem", left:"3rem"}}/>
             <Row justify="space-between" style={styles.navBar}>
                 <WelcomeText>
                     {!!user && (
@@ -246,15 +249,7 @@ export const HomePageHeader = () => {
                 </NavGroup>
             </Row>
             <HeaderContainer>
-                {/* <Image
-                    src={
-                        appConfig.config !== DEFAULT_APP_CONFIG
-                            ? appConfig.config.visualConfig.logoUrl || themeConfig.assets.logoUrl
-                            : undefined
-                    }
-                    preview={false}
-                    style={styles.logoImage}
-                /> */}
+                <PodiumLogoWithText height="10rem" width='19rem' />
                 {!!themeConfig.content.subtitle && (
                     <Typography.Text style={styles.subtitle}>{themeConfig.content.subtitle}</Typography.Text>
                 )}

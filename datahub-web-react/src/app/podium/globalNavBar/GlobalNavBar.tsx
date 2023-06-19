@@ -44,15 +44,15 @@ export const GlobalNavBar = ({
         <WaffleApp variant={variant} metadata={appsData} currentAppCode={currentAppCode} />
       </div>
       <div className={classes.businessContextSwitcher}>
-          <L0NavBar
+          {/* <L0NavBar
             metadata={menuData}
             path={window.location.pathname}
             availableBusinessContext={availableBusinessContext}
             variant={variant}
-          />
+          /> */}
       </div>
-      <div className={classes.accountOptions}>
-      </div>
+      {/* <div className={classes.accountOptions}>
+      </div>       */}
     </div>
   );
 };

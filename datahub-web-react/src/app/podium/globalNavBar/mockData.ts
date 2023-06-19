@@ -13,38 +13,5 @@ export const applications: Application[] = [
 
 export const navigationMetaData = 
 {
-  menu: [
-    {
-      id: 1,
-      menuName: "Analytics",
-      link: "/analytics",
-      subMenus: [],
-      externalLink: "",
-      subMenuEndpoint: "",
-      subMenuLink: "",
-      subMenuTitle: "",
-      sourcePages: [],
-      appCode: "",
-      createdDate: "",
-      createdBy: "",
-      lastModifiedDate: "",
-      lastModifiedBy: ""
-    },
-    {
-      id: 2,
-      menuName: "Glossary",
-      link: "/glossary",
-      subMenus: [],
-      externalLink: "",
-      subMenuEndpoint: "",
-      subMenuLink: "",
-      subMenuTitle: "",
-      sourcePages: [],
-      appCode: "",
-      createdDate: "",
-      createdBy: "",
-      lastModifiedDate: "",
-      lastModifiedBy: ""
-    }
-  ]
+  menu: []
 }

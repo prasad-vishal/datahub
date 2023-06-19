@@ -144,7 +144,6 @@ const App: React.VFC = () => {
                         </ApolloProvider>
                     </EntityRegistryContext.Provider>
                     </div>
-                        
                 </Router>
             </ThemeProvider>
         </HelmetProvider>

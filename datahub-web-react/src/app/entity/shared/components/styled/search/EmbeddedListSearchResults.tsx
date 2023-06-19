@@ -1,10 +1,10 @@
 import React from 'react';
 import { Pagination, Typography } from 'antd';
 import styled from 'styled-components';
+import { LoadingSpinner } from '@podium-ui/core-web';
 import { FacetFilterInput, FacetMetadata, SearchResults as SearchResultType } from '../../../../../../types.generated';
 import { SearchCfg } from '../../../../../../conf';
 import { EntityNameList } from '../../../../../recommendations/renderer/component/EntityNameList';
-import { ReactComponent as LoadingSvg } from '../../../../../../images/datahub-logo-color-loading_pendulum.svg';
 import { EntityAndType } from '../../../types';
 import { UnionType } from '../../../../../search/utils/constants';
 import { SearchFiltersSection } from '../../../../../search/SearchFiltersSection';
@@ -116,7 +116,7 @@ export const EmbeddedListSearchResults = ({
                 <ResultContainer>
                     {loading && (
                         <LoadingContainer>
-                            <LoadingSvg height={80} width={80} />
+                            <LoadingSpinner />
                         </LoadingContainer>
                     )}
                     {!loading && (

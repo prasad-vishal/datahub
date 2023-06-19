@@ -2,6 +2,7 @@ import { DeliveredProcedureOutlined } from '@ant-design/icons';
 import { Pagination, Table, Tooltip, Typography } from 'antd';
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { LoadingSpinner } from '@podium-ui/core-web';
 
 import { useGetDataJobRunsQuery } from '../../../../graphql/dataJob.generated';
 import { DataProcessInstanceRunResultType, DataProcessRunStatus } from '../../../../types.generated';
@@ -13,7 +14,6 @@ import {
 import { CompactEntityNameList } from '../../../recommendations/renderer/component/CompactEntityNameList';
 import { ANTD_GRAY } from '../../shared/constants';
 import { useEntityData } from '../../shared/EntityContext';
-import { ReactComponent as LoadingSvg } from '../../../../images/datahub-logo-color-loading_pendulum.svg';
 import { scrollToTop } from '../../../shared/searchUtils';
 
 const ExternalUrlLink = styled.a`
@@ -136,7 +136,7 @@ export const RunsTab = () => {
     if (loading) {
         return (
             <LoadingContainer>
-                <LoadingSvg height={80} width={80} />
+                <LoadingSpinner />
                 <LoadingText>Fetching runs...</LoadingText>
             </LoadingContainer>
         );

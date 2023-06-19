@@ -10,6 +10,7 @@ import { Message } from '../shared/Message';
 import { isLoggedInVar } from './checkAuthStatus';
 import analytics, { EventType } from '../analytics';
 import { useAppConfig } from '../useAppConfig';
+import PodiumLogo from '../podium/PodiumLogo';
 
 type FormValues = {
     username: string;
@@ -109,6 +110,7 @@ export const LogIn: React.VFC<LogInProps> = () => {
 
     return (
         <div className={styles.login_page}>
+            <PodiumLogo style={{position: "fixed", top: "7rem", left:"3rem"}}/>
             {maybeRedirectError && maybeRedirectError.length > 0 && (
                 <Message type="error" content={maybeRedirectError} />
             )}

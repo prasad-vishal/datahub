@@ -18,8 +18,8 @@ import {
 import { CompactEntityNameList } from '../../../recommendations/renderer/component/CompactEntityNameList';
 import { ANTD_GRAY } from '../../shared/constants';
 import { useEntityData } from '../../shared/EntityContext';
-import { ReactComponent as LoadingSvg } from '../../../../images/datahub-logo-color-loading_pendulum.svg';
 import { scrollToTop } from '../../../shared/searchUtils';
+import { LoadingSpinner } from '@podium-ui/core-web';
 
 const ExternalUrlLink = styled.a`
     font-size: 16px;
@@ -174,7 +174,7 @@ export const OperationsTab = () => {
             </ReadWriteButtonGroup>
             {loading && (
                 <LoadingContainer>
-                    <LoadingSvg height={80} width={80} />
+                    <LoadingSpinner />
                     <LoadingText>Fetching runs...</LoadingText>
                 </LoadingContainer>
             )}

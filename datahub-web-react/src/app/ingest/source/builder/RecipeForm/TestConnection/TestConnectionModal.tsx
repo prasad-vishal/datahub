@@ -3,12 +3,12 @@ import { Button, Divider, Modal, Typography } from 'antd';
 import React from 'react';
 import { green, red } from '@ant-design/colors';
 import styled from 'styled-components/macro';
-import { ReactComponent as LoadingSvg } from '../../../../../../images/datahub-logo-color-loading_pendulum.svg';
 import { ANTD_GRAY } from '../../../../../entity/shared/constants';
 import ConnectionCapabilityView from './ConnectionCapabilityView';
 import { CapabilityReport, SourceCapability, TestConnectionResult } from './types';
 import { SourceConfig } from '../../types';
 import useGetSourceLogoUrl from '../../useGetSourceLogoUrl';
+import { LoadingSpinner } from '@podium-ui/core-web';
 
 const LoadingWrapper = styled.div`
     display: flex;
@@ -117,7 +117,7 @@ function TestConnectionModal({
                     <LoadingHeader level={4}>Testing your connection...</LoadingHeader>
                     <LoadingSubheader>This could take a few minutes.</LoadingSubheader>
                     <LoadingWrapper>
-                        <LoadingSvg height={100} width={100} />
+                        <LoadingSpinner />
                     </LoadingWrapper>
                 </ResultsWrapper>
             )}
